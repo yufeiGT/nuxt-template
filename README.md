@@ -11,7 +11,7 @@ $ npm i
 # 开发
 $ npm run dev
 
-# 编译
+# 编译启动
 $ npm run build
 $ npm start
 
