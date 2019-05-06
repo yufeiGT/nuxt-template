@@ -1,0 +1,29 @@
+{
+	"name": "nuxt",
+	"version": "1.0.0",
+	"description": "My lovely Nuxt.js project",
+	"author": "GT",
+	"private": true,
+	"scripts": {
+		"dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+		"build": "nuxt build",
+		"start": "cross-env NODE_ENV=production node server/index.js",
+		"generate": "nuxt generate"
+	},
+	"dependencies": {
+		"@nuxtjs/axios": "^5.4.1",
+		"body-parser": "^1.19.0",
+		"cross-env": "^5.2.0",
+		"express": "^4.16.4",
+		"express-session": "^1.16.1",
+		"iview": "3.1.5",
+		"js-cookie": "^2.2.0",
+		"nuxt": "^2.4.0",
+		"vuex-persistedstate": "^2.5.4"
+	},
+	"devDependencies": {
+		"node-sass": "^4.12.0",
+		"nodemon": "^1.18.9",
+		"sass-loader": "^7.1.0"
+	}
+}
