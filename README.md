@@ -1,4 +1,4 @@
-# nuxt
+# Nuxt.js + iView 
 
 > My lovely Nuxt.js project
 
