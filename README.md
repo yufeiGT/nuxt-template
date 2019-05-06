@@ -17,4 +17,4 @@ $ npm start
 
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Nuxt.js [相关文档](https://nuxtjs.org).
