@@ -1,22 +1,20 @@
 # Nuxt.js + iView 
 
-> My lovely Nuxt.js project
+> 一套项目模板
 
-## Build Setup
+## 启动步骤
 
 ``` bash
-# install dependencies
-$ npm install
+# 安装依赖模块
+$ npm i
 
-# serve with hot reload at localhost:3000
+# 开发
 $ npm run dev
 
-# build for production and launch server
+# 编译
 $ npm run build
 $ npm start
 
-# generate static project
-$ npm run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
