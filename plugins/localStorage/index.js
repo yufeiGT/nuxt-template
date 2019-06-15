@@ -6,7 +6,11 @@
 import createPersistedState from 'vuex-persistedstate';
 import Cookies from 'js-cookie';
 let cookieStorage = {
-	getItem: key => Cookies.getJSON(key),
+	getItem: key => {
+		let value = Cookies.getJSON(key) || {};
+		delete value.token;
+		return value;
+	},
 	setItem: (key, value) => Cookies.set(key, value, {
 		expires: 3,
 		secure: false,

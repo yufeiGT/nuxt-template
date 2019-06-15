@@ -1,5 +1,5 @@
 {
-	"name": "nuxt",
+	"name": "shopmall",
 	"version": "1.0.0",
 	"description": "My lovely Nuxt.js project",
 	"author": "GT",
@@ -14,14 +14,17 @@
 		"@nuxtjs/axios": "^5.4.1",
 		"body-parser": "^1.19.0",
 		"cross-env": "^5.2.0",
+		"element-ui": "2.7.2",
 		"express": "^4.16.4",
 		"express-session": "^1.16.1",
-		"iview": "3.1.5",
 		"js-cookie": "^2.2.0",
 		"nuxt": "^2.4.0",
+		"nuxt-i18n": "^5.12.3",
+		"vue-qriously": "^1.1.1",
 		"vuex-persistedstate": "^2.5.4"
 	},
 	"devDependencies": {
+		"element-theme-chalk": "^2.8.2",
 		"node-sass": "^4.12.0",
 		"nodemon": "^1.18.9",
 		"sass-loader": "^7.1.0"

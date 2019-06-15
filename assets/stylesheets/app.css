@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	outline: none;
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-family: "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+}
+
+html, body{
+	overflow: auto;
+	width: 100%;
+	height: 100%;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-size: 100%;
+}
+
+address, cite, dfn, em, var{
+	font-style: normal;
+}
+
+code, kbd, pre, samp{
+	font-family: courier new, courier, monospace;
+}
+
+ul, ol{
+	list-style: none;
+}
+
+legend{
+	color: #000;
+}
+
+fieldset, img{
+	border: 0;
+}
+
+button, input, select, textarea{
+	font-size: 100%;
+}
+
+ul, li{
+	list-style-type: none;
+}
+
+a, span{
+	display: inline-block;
+	text-decoration: none;
+}
+
+input::-webkit-input-placeholder{
+	color: #BFBFBF;
+}
+
+input::-moz-placeholder{
+	color: #BFBFBF;
+}
+
+input:-moz-placeholder{
+	color: #BFBFBF;
+}
+
+input:-ms-input-placeholder{
+	color: #BFBFBF;
+}
+
+[image]{
+	background: no-repeat center center;
+	background-size: contain;
+}
+
+[not-select]{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+}
+
+@supports/ (bottom: constant(safe-area-inset-bottom)){
+	div{
+		padding-bottom: constant(safe-area-inset-bottom);
+		box-sizing: border-box;
+	}
+}
+
+/*new */
+.v-image{
+	overflow: hidden;
+	position: relative;
+}
+
+.v-image>img{
+	overflow: hidden;
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+#__nuxt{
+	overflow: hidden;
+	height: 100%;
+}
+
+#__layout{
+	overflow: auto;
+	height: 100%;
+}
+

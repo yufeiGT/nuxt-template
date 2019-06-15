@@ -1,7 +1,4 @@
 const express = require('express'),
-	request = require('request'),
-	bodyParser = require('body-parser'),
-	session = require('express-session'),
 	consola = require('consola'),
 	{
 		Nuxt,
@@ -13,55 +10,7 @@ const express = require('express'),
 let config = require('../nuxt.config.js');
 config.dev = !(process.env.NODE_ENV === 'production');
 
-/**
- * authorize
- * @author GT
- * @date 2019.05.06
- */
-app.use(bodyParser.json());
-app.use(session({
-	secret: 'nuxt-gt',
-	resave: false,
-	saveUninitialized: false,
-	cookie: {
-		maxAge: config.cookieMaxAge,
-	},
-}));
-app.post(`${config.router.base}login`, (req, res) => {
-	request.post('http://ec2-52-83-93-248.cn-northwest-1.compute.amazonaws.com.cn:30001/app/app_login', {
-		form: req.body,
-	}, (err, r, body) => {
-		res.statusCode = r.statusCode;
-		if (r.statusCode == 200 || r.statusCode == 304) {
-			const json = JSON.parse(body);
-			if (json.code == 200) req.session.token = json.data.token;
-		}
-		res.send(body);
-		res.end();
-	});
-});
-app.post(`${config.router.base}logout`, (req, res) => {
-	let token = req.session && req.session.token;
-	request.post('http://ec2-52-83-93-248.cn-northwest-1.compute.amazonaws.com.cn:30001/app/app_logout', {
-		headers: {
-			token: token,
-		},
-	}, (err, r, body) => {
-		res.statusCode = r.statusCode;
-		if (r.statusCode == 200 || r.statusCode == 304) {
-			const json = JSON.parse(body);
-			if (json.code == 200) delete req.session.token;
-		}
-		res.send(body);
-		res.end();
-	});
-});
-// app.get('/token', (req, res) => {
-// 	res.send({
-// 		token: req.session.token,
-// 	});
-// 	res.end();
-// });
+require('./request.js')(app);
 
 async function start() {
 	// Init Nuxt.js

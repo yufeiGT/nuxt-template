@@ -12,11 +12,8 @@ const ajax = (options = {}, success = () => {}, error = () => {}) => {
 		}
 		success(res.data || {});
 	}).catch(res => {
-		if (!res.response) res.response = {};
-		if (!res.response.data) res.response.data = {};
-		error($.extend(true, {
-			code: res.response.data.status,
-		}, res.response.data));
+		if (!res.data) res.data = {};
+		error(res.data);
 		if (process.env.NODE_ENV === 'development') throw res;
 	});;
 };
@@ -26,7 +23,7 @@ export function Login(params, ...param) {
 		params,
 	}, ...param);
 };
-export function Logout( ...param) {
+export function Logout(...param) {
 	ajax({
 		url: 'logout',
 	}, ...param);

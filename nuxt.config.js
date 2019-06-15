@@ -4,20 +4,20 @@ const pkg = require('./package'),
 module.exports = {
 	mode: 'universal',
 	router: {
+		scrollBehavior: (to, from, savedPosition) => {
+			return savedPosition;
+		},
 		base: config.routerBase,
 	},
 	server: {
-		host: '0.0.0.0',
+		host: '127.0.0.1',
 		port: config.port,
 	},
-	axios: config.axios,
-	proxy: config.proxy,
-	cookieMaxAge: 1000 * 60,
 	/*
 	 ** Headers of the page
 	 */
 	head: {
-		title: pkg.name,
+		title: 'nuxt-template',
 		meta: [{
 			charset: 'utf-8'
 		}, {
@@ -31,43 +31,36 @@ module.exports = {
 		link: [{
 			rel: 'icon',
 			type: 'image/x-icon',
-			href: '/favicon.ico'
+			href: '/favicon.png'
 		}]
 	},
-
 	/*
 	 ** Customize the progress-bar color
 	 */
 	loading: {
-		color: '#fff'
+		color: '#E60012'
 	},
 
 	/*
 	 ** Global CSS
 	 */
-	css: [
-		'iview/dist/styles/iview.css'
-	],
+	css: [],
 
 	/*
 	 ** Plugins to load before mounting the App
 	 */
-	plugins: [
-		'@/plugins/iview', {
-			src: '@/plugins/axios',
-			ssr: false,
-		}, {
-			src: '@plugins/localStorage',
-			ssr: false,
-		},
-	],
+	plugins: ['@/plugins/elementUI', {
+		src: '@plugins/axios',
+		ssr: false,
+	}, {
+		src: '@plugins/localStorage',
+		ssr: false,
+	}, ],
 
 	/*
 	 ** Nuxt.js modules
 	 */
-	modules: [
-		'@nuxtjs/axios',
-	],
+	modules: ['@nuxtjs/axios'],
 
 	/*
 	 ** Build configuration
@@ -77,6 +70,6 @@ module.exports = {
 		 ** You can extend webpack config here
 		 */
 		extend(config, ctx) {},
-		vendor: ['axios'],
+		vendor: ['axios', 'element-ui'],
 	}
 }
