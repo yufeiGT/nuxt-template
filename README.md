@@ -1,4 +1,4 @@
-# Nuxt.js + iView 
+# Nuxt.js + Element-ui 
 
 > 一套项目模板
 
