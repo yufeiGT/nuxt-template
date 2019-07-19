@@ -1,8 +1,7 @@
-# MIDDLEWARE
+> 插入中间件的页面会在ssr前执行中间件
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-This directory contains your application middleware.
-Middleware let you define custom functions that can be run before rendering either a page or a group of pages.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/routing#middleware).
+## 目录结构
+| 目录          | 描述                              |
+|:--------------|:----------------------------------|
+| auth.js       | 用户未登录时跳转到login登录页面   |
+| isAuth.js     | 用户登录后跳转到网站首页          |
