@@ -1,7 +1,61 @@
-# PLUGINS
+> 插件功能可直接引用使用
 
-**This directory is not required, you can delete it if you don't want to use it.**
+## 目录结构
+| 目录          | 描述                  |
+|:--------------|:----------------------|
+| -axios        | 封装axios             |
+| -elementUI    | 引用element-ui        |
+| -localStorage | vuex持久化            |
+| components.js | 注册全局组件          |
+| index.js      | 基础功能              |
 
-This directory contains Javascript plugins that you want to run before mounting the root Vue.js application.
+## index.js 功能说明
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/plugins).
+### isArray
+> 判断对象是否是一个数组
+***
+#### API
+| 参数          | 类型          | 描述                  |
+|:--------------|:--------------|:----------------------|
+| obj           | Object        | 需要判断的对象        |
+#### Return
+| 返回值          | 返回值描述          | 返回值类型                  |
+|:----------------|:--------------------|:----------------------------|
+| isArray         | 是否是数组          | Boolean                     |
+
+### isPlainObject
+> 判断对象是否是一个对象
+***
+#### API
+| 参数          | 类型          | 描述                  |
+|:--------------|:--------------|:----------------------|
+| obj           | Object        | 需要判断的对象        |
+#### Return
+| 返回值          | 返回值描述          | 返回值类型                  |
+|:----------------|:--------------------|:----------------------------|
+| isObj           | 是否是对象          | Boolean                     |
+
+### extend
+> 合并一个或多个对象
+***
+#### API
+| 参数          | 类型          | 描述                                  |
+|:--------------|:--------------|:--------------------------------------|
+| deep          | Boolean       | 设置为true时进行递归合并，可选        |
+| obj{1, n}     | Object        | 需要进行合并的对象，数量没有上限      |
+#### Return
+| 返回值          | 返回值描述          | 返回值类型                  |
+|:----------------|:--------------------|:----------------------------|
+| obj             | 合并后的对象        | Object                      |
+
+### dataMat
+> 格式化时间
+***
+#### API
+| 参数          | 类型          | 描述                  |
+|:--------------|:--------------|:----------------------|
+| value         | String/Object | 时间                  |
+#### Return
+| 返回值          | 返回值描述          | 返回值类型                  |
+|:----------------|:--------------------|:----------------------------|
+| dateStr         | 格式化后的对象      | String                      |
