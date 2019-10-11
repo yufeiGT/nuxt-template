@@ -50,6 +50,9 @@ module.exports = {
 	 ** Plugins to load before mounting the App
 	 */
 	plugins: ['@/plugins/elementUI', {
+		src: '@plugins/components',
+		ssr: false,
+	}, {
 		src: '@plugins/axios',
 		ssr: false,
 	}, {
