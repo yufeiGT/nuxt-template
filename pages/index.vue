@@ -1,5 +1,6 @@
 <template>
 	<div class="container">
+		<el-time-picker v-model="ruleForm.nightTime" is-range range-separator="至" start-placeholder="开始时间" end-placeholder="结束时间" placeholder="选择时间范围" />
 		<nuxt />
 	</div>
 </template>
@@ -19,7 +20,11 @@ export default {
 	loading: true,
 	components: {},
 	data() {
-		return {};
+		return {
+			ruleForm: {
+				nightTime: '',
+			},
+		};
 	},
 	methods: {},
 	async asyncData(context) {
